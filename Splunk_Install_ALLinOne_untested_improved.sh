@@ -183,6 +183,10 @@ BETABuildWebCert(){
         
         if
     }
+    get_password
+    create_cert_request
+    convert_certificate_format
+    copy_cert_config
 }
 
 
@@ -252,6 +256,7 @@ BETAsplunkbase(){
         # Rest of the code...
         # ...
     fi
+    
 }
 
 
@@ -754,6 +759,18 @@ BETAneuePartition(){
     trap - ERR
     colormsg "Das Skript wurde erfolgreich abgeschlossen."
 }
+
+
+# Hauptaufruf der Funktion
+BETATestSyno
+BETABuildWebCert
+BETAsplunkbase
+BETADeployment
+BETASearchhead
+BETAIndexer
+BETASyslog
+BETABuildPackage
+BETAneuePartition
 
 
 
